@@ -1,81 +1,97 @@
 import axios from "axios";
+import Product from "../../views/Product.vue";
 
 const product = {
   namespaced: true,
   state: {
-    productData: [],
-    singleProduct:[],
-    cart: [],
+    products: [],
   },
+
   getters: {
-    getProduct: (state) => state.productData,
-    //
-    getProductBySlug: (state) => (productSlug) => {
-        console.log("ProductSlug:", productSlug);
-        console.log("ProductData:", state.productData);
-        const product = state.productData.find((p) => p.slug == productSlug);
-        console.log("Product:", product);
-        return product;
+    getProducts: (state) => state.products,
   },
-},
+
   actions: {
-    async fetchProduct({ commit }) {
+  async createProduct({ commit }, productData) {
       try {
-        const data = await axios.get("https://ecommerce.olipiskandar.com/api/v1/product/search");
-        commit("SET_PRODUCT", data.data['products']['data']);
-      } catch (error) {
-        alert(error);
-        console.log(error);
-      }
-    },
-    //
-    async fetchSingleProduct({ commit }, productSlug){
-        try{
-            const response = await axios.get(
-                `https://ecommerce.olipiskandar.com/api/v1/product/details/${productSlug}`
-            );
-            commit("SET_SINGLE_PRODUCT", response.data['products']);
-        }catch (error) {
-            alert(error);
-            console.log(error);
-        }
-    },
-    async addToCart({ commit }, productId) {
-      try {
-        const response = await axios.post(
-          "https://ecommerce.olipiskandar.com/api/v1/carts/add",
-          {
-              "variation_id": productId,
-              "qty":  1,
-              "temp_user_id": null,
-          }, {
+        const config = {
           headers: {
-              'Authorization': `Bearer ${localStorage.getItem("token")}`
-          }
-          });
-          commit("ADD_TO_CART", response.data)
-          console.log(response.data)
+            Authorization: `Bearer ${localStorage.getItem("token")}`, // Perbaikan #1
+          },
+        };
+
+        const response = await axios.post(
+          "http://localhost:8080/api/v1/produk/add",
+          productData,
+          config
+        );
+
+        const newProduct = response.data.data;
+
+        commit("addProduct", newProduct);
+        return newProduct;
       } catch (error) {
         console.error(error);
-
+        throw error;
       }
     },
 
+    async fetchPrdouct({ commit }) {
+      try {
+        const config = {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`, // Perbaikan #1
+          },
+        };
+
+        const response = await axios.get(
+          "http://localhost:8080/api/v1/produk",
+          config
+        );
+
+        commit("setProducts", response.data.data.rows);
+        return response.data.data.rows;
+        // Menyimpan produk yang diterima ke dalam state
+      } catch (error) {
+        console.error(error);
+        throw error;
+      }
+    },
   },
-  
-  mutations: {
-    SET_PRODUCT(state, product) {
-      state.productData = product;
-    },
-    SET_SINGLE_PRODUCT(state, product) {
-        state.singleProduct = product;
+  async updateProduct({ commit }, productData) {
+  try {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      ADD_TO_CART(state, cart) {
-        state.cart = cart
+    };
+
+    const response = await axios.put(
+      `http://localhost:8080/api/v1/produk/$(products.id)`, // Adjust the URL according to your API endpoint
+      productData,
+      config
+    );
+
+    // Mengirimkan data produk yang telah diperbarui ke mutation untuk diperbarui dalam state
+    commit("updateProduct", response.data.data);
+    return response.data.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+},
+
+
+  mutations: {
+    addProduct: (state, newProduct) => {
+      state.products.push(newProduct);
     },
-    // SET_FILTER_PRODUCT(state, product) {
-    //   state.filterPRoduct = product;
-    // },
+    setProducts: (state, products) => {
+      state.products = products;
+    },
+    updateProducts: (state, products) => {  
+      state.products = products;
+    },
   },
 };
 

@@ -12,6 +12,28 @@
   </div>
 </section>
 
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+    <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
+      <div class="md:pt-8 lg:flex lg:flex-col lg:justify-center">
+
+        <h1 class="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">Tentang</h1>
+
+        <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">T-shirt adalah segala jenis penutup tubuh yang digunakan oleh manusia untuk melindungi diri dari elemen lingkungan seperti cuaca, sinar matahari, atau untuk tujuan estetika, identitas, dan budaya. Isinya sangat beragam, tergantung pada kebutuhan, preferensi, dan konteks sosial.</p>
+      </div>
+      <div>
+        <div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto">
+          <img src="https://images.tokopedia.net/img/cache/700/hDjmkQ/2024/2/29/61c9e93d-2db1-4846-90fd-691478c1ecfc.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="h-full w-full object-cover object-center" />
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <h2 class="mb-2 text-center text-xl font-semibold text-gray-800 sm:text-2xl md:mb-4 md:text-left">Lainya</h2>
+
+        <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">T-shirt juga bisa sangat bervariasi dalam desain, warna, dan bahan. Beberapa bahan yang umum digunakan dalam pembuatan t-shirt termasuk katun, wol, sutra, linen, polyester, dan banyak lagi. Setiap jenis pakaian juga dapat memiliki makna budaya atau simbolisme tertentu, dan sering kali digunakan untuk mengekspresikan identitas individu atau kelompok.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </template>

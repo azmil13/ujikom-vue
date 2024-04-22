@@ -1,52 +1,65 @@
 <template>
-<section class="py-20">
-  <h1 class="mb-12 text-center font-sans text-5xl font-bold">Gallery</h1>
-  <div class="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-10">
-    <article class="h-90 col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2">
-      <a href="#" class="block h-full w-full">
-        <img class="max-h-40 w-full object-cover" alt="featured image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTceOrnM8w5T2WD1tQwURk8QmaXiocbFvuA&usqp=CAU" />
-        <div class="w-full bg-white p-4">
-          <p class="text-md font-medium text-indigo-500"><a href="/product">Selengkapnya</a></p>
-          <p class="mb-2 text-xl font-medium text-gray-800">A Visit to Mount Abignale</p>
-          <p class="text-md font-light text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse vel neque ipsam?</p>
-          <div class="justify-starts mt-4 flex flex-wrap items-center">
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#js</div>
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#icefactory</div>
-          </div>
-        </div>
-      </a>
-    </article>
+  <form @submit.prevent="createProduct" action="">
+
+  <div class="space-y-4 px-8 py-10">
+    <label class="block" for="name">
+      <p class="text-gray-600">Nama Produk</p>
+      <input v-model="nama_produk" class="w-full rounded-md border bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" type="text" placeholder="Enter your Nama Produk " />
+    </label>
+    <label class="block" for="name">
+      <p class="text-gray-600">Description</p>
+      <input v-model="description" class="w-full rounded-md border bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" type="text" placeholder="Enter your Descriptiption" />
+    </label>
+    <label class="block" for="name">
+      <p class="text-gray-600">Harga</p>
+      <input v-model="harga" class="w-full rounded-md border bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" type="text" placeholder="Enter your Harga" />
+    </label>
+    <label class="block" for="name">
+      <p class="text-gray-600">Stok</p>
+      <input v-model="stok" class="w-full rounded-md border bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" type="text" placeholder="Enter your Stok" />
+    </label>
     
-    <article class="h-90 col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2">
-      <a href="#" class="block h-full w-full">
-        <img class="max-h-40 w-full object-cover" alt="featured image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTceOrnM8w5T2WD1tQwURk8QmaXiocbFvuA&usqp=CAU"/>
-        <div class="w-full bg-white p-4">
-          <p class="text-md font-medium text-indigo-500"><a href="/Product">Selengkapnya</a></p>
-          <p class="mb-2 text-xl font-medium text-gray-800">Sunflowers are my favorite</p>
-          <p class="text-md font-light text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse vel neque ipsam?</p>
-          <div class="justify-starts mt-4 flex flex-wrap items-center">
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#js</div>
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#icefactory</div>
-          </div>
-        </div>
-      </a>
-    </article>
-    
-    <article class="h-90 col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2">
-      <a href="#" class="block h-full w-full">
-        <img class="max-h-40 w-full object-cover" alt="featured image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTceOrnM8w5T2WD1tQwURk8QmaXiocbFvuA&usqp=CAU"/> 
-        <div class="w-full bg-white p-4">
-          <p class="text-md font-medium text-indigo-500"><a href="/product">Selengkapnya</a></p>
-          <p class="mb-2 text-xl font-medium text-gray-800">Getting to know the Ice Factory Pattern</p>
-          <p class="text-md font-light text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse vel neque ipsam?</p>
-          <div class="justify-starts mt-4 flex flex-wrap items-center">
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#js</div>
-            <div class="mr-2 mt-1 rounded-2xl bg-blue-100 py-1.5 px-4 text-xs text-gray-600">#icefactory</div>
-          </div>
-        </div>
-      </a>
-    </article>
+    <button class="mt-4 rounded-full bg-blue-800 px-10 py-2 font-semibold text-white">Submit</button>
   </div>
-</section>
+  </form>
 
 </template>
+<script>
+export default {
+  data() {
+    return {
+      nama_produk: "",
+      description: "",
+      harga: "",
+      stok: "",
+    };
+  },
+  methods: {    
+    async createProduct() {
+      const projectData = {
+        nama_produk: this.nama_produk,
+        description: this.description,
+        harga: this.harga,
+        stok: this.stok
+      };
+      try {
+        const success = await this.$store.dispatch(
+          "product/createProduct",
+          projectData
+        );
+
+        if (success) {
+	  alert("Berhasil")
+          this.nama_produk = "";
+          this.description = "";
+          this.harga = "";
+          this.stok = "";
+        }
+      } catch (error) {
+        alert("Gagal")
+        console.error(error);
+      }
+    },
+  },
+};
+</script>

@@ -6,7 +6,7 @@
             <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div class="w-full px-24 z-10">
                 <h1 class="text-5xl font-bold text-left tracking-wide">Login</h1>
-                <p class="text-3xl my-4">Terlebih Dahulu</p>
+                <p class="text-3xl my-4">First</p>
             </div>
             <div class="bottom-0 absolute p-4 text-center right-0 left-0 flex justify-center space-x-4">
                 <span>
@@ -95,7 +95,7 @@ export default {
 
           if (success && this.isAuthenticated) {
               // Redirect to the desired route on successful login
-              this.$router.push('/');
+              this.$router.push('/dasboard');
           } else {
               if (this.loginError){
               alert("Login Failed");

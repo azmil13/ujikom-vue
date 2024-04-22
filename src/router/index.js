@@ -1,13 +1,13 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
-import Galery from "../views/Galery.vue";
+import Tambahdata from "../views/Tambahdata.vue";
 import Contact from "../views/Contact.vue";
 import Login from "../views/Login.vue";
 import Product from "../views/Product.vue";
-import Detailproduct from "../views/Detailproduct.vue"
-import Menyatu from "../components/Menyatu.vue";
-import Dashboard from "../views/Dashboard.vue";
-
+import Detailproduct from "../views/Detailproduct.vue";
+import Dasboard from "../views/Dasboard.vue";
+import Adminproject from "../views/Adminproject.vue";
+import editProduct from "../views/EditProduct.vue"
 
 const routes = [
     {
@@ -16,9 +16,14 @@ const routes = [
         component: Home,
     },
     {
-        path: "/galery",
-        name: "Galery",
-        component: Galery,
+        path: "/tambah",
+        name: "tambah",
+        component: Tambahdata,
+    },
+    {
+        path: "/edit",
+        name: "edit",
+        component: editProduct,
     },
     {
         path: "/contact",
@@ -36,21 +41,21 @@ const routes = [
         component: Product,
     },
     {
-        path: "/menyatu",
-        name: "Menyatu",
-        component: Menyatu,
-    },
-    {
         path: "/detail",
-        name: "Detailproduct",
+        name: "detail",
         component: Detailproduct,
     },
     {
-        path: "/dashboard",
-        name: "dashboard",
-        component: Dashboard,
+        path: "/dasboard",
+        name: "dasboard",
+        component: Dasboard,
     },
-
+    {
+        path: "/admin",
+        name: "admin",
+        component: Adminproject,
+    },
+    
 ];
 
 const router = createRouter({

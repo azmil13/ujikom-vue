@@ -2,9 +2,9 @@ import { createStore } from "vuex";
 import auth from "./modules/auth";
 import brand from "./modules/brand";
 import category from "./modules/category";
-import product from "./modules/product";
 import cart from "./modules/cart";
 import order from "./modules/order"
+import product from "./modules/product"
 
 const store = createStore({
     state: {
@@ -14,9 +14,10 @@ const store = createStore({
         auth,
         brand,
         category,
-        product,
         cart,
-        order
+        order,
+        product,
+
     },
 });
 
