@@ -14,18 +14,19 @@
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg></span>
-                <span class=""> <router-link to="admin"> admin </router-link> </span>
-          </button>
-          <li class="relative">
-          <button class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 font-semibold focus:outline-none">
-            <span
-              ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-              </svg> </span
-            ><span class="">Transaction</span>
+                <span class=""> <router-link to="admin"> Data Produk </router-link> </span>
           </button>
           </li>
-        </li>
+          <li class="relative"> 
+          <button class="focus:bg-slate-600 hover:bg-slate-600 flex w-full space-x-2 rounded-md px-10 py-4 font-semibold focus:outline-none">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </span>
+              <span class=""> <router-link to="datakontak"> Data Kontak </router-link> </span>
+          </button>
+          </li>
       </ul>
       <div class="my-6 mt-auto ml-10 flex cursor-pointer">
         <div>
@@ -69,35 +70,58 @@
           </li>
         </ul>
       </div>
-    </header>
-    <!-- /Navbar -->
-
-    <!-- Main -->
-    <div class="h-full overflow-hidden pl-10">
-      <main id="dashboard-main" class="h-[calc(100vh-10rem)] overflow-auto px-4 py-10">
-        <!-- Put your content inside of the <main/> tag -->
-        <h1 class="text-2xl font-black text-gray-800"></h1>
-        <p class="mb-6 text-gray-600"></p>
-        <div class="flex flex-wrap gap-x-4 gap-y-8">
-          <h1 clss="mb-4 text-center text-2xl font-bold text-gray-800 sm:text-3xl md:mb-6 md:text-left">Operational since 1967</h1>
-        <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus accusamus esse cum, praesentium laudantium enim pariatur magnam accusantium illum animi? Quos quisquam at laborum eius?</p>
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img style="width: 85%;" class="object-cover object-center rounded" alt="hero" src="https://media.istockphoto.com/id/1249693837/id/vektor/adegan-dengan-tiga-proyektor-garis-dan-ikon-padat-konsep-festival-musik-tanda-pencahayaan.jpg?s=612x612&w=0&k=20&c=TdML-Plgi9_rh0kCsunWoAndWHlMjbamQkTcH06wLYE=">
-    </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img style="width: 85%;" class="object-cover object-center rounded" alt="hero" src="https://media.istockphoto.com/id/1249693837/id/vektor/adegan-dengan-tiga-proyektor-garis-dan-ikon-padat-konsep-festival-musik-tanda-pencahayaan.jpg?s=612x612&w=0&k=20&c=TdML-Plgi9_rh0kCsunWoAndWHlMjbamQkTcH06wLYE=">
-    </div>
-          <div class="sm:w-[38rem] mx-auto my-10 overflow-hidden rounded-2xl bg-white shadow-lg sm:max-w-lg">
-          </div>
+  </header>
+  <div class="flex flex-wrap gap-x-4 gap-y-12 bg-gray-100 px-4 py-20 lg:px-20">
+  <div class="flex w-72">
+    <div class="flex w-full max-w-full flex-col break-words rounded-lg border border-gray-100 bg-white text-gray-600 shadow-lg">
+      <div class="p-3">
+        <div class="absolute -mt-10 h-16 w-16 rounded-xl bg-gradient-to-tr from-gray-700 to-gray-400 text-center text-white shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mt-4 h-7 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
         </div>
-      </main>
+        <div class="pt-1 text-right" v-if="product">
+          <p class="text-sm font-light capitalize"></p>
+          <h4 class="text-2xl font-semibold tracking-tighter xl:text-2xl">{{ product && product.rows ? product.rows.length : 'Loading...' }} </h4>
+        </div>
+        <div v-else>
+          <h4>Memuat....</h4>
+        </div>
+      </div>
+      <hr class="opacity-50" />
+      <div class="p-4">
+        <p class="font-light"><span class="text-sm font-bold text-green-600">+22% </span>vs last month</p>
+      </div>
     </div>
   </div>
+  <div class="flex w-72">
+    <div class="flex w-full max-w-full flex-col break-words rounded-lg border border-gray-100 bg-white text-gray-600 shadow-lg">
+      <div class="p-3">
+        <div class="absolute -mt-10 h-16 w-16 rounded-xl bg-gradient-to-tr from-blue-700 to-blue-500 text-center text-white shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mt-4 h-7 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <div class="pt-1 text-right">
+          <p class="text-sm font-light capitalize"></p>
+          <h4 class="text-2xl font-semibold tracking-tighter xl:text-2xl"></h4>
+        </div>
+      </div>
+      <hr class="opacity-50" />
+      <div class="p-4">
+        <p class="font-light"><span class="text-sm font-bold text-green-600">+3% </span>vs last month</p>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
-  
+
+      </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
   data() {
     return {
@@ -107,7 +131,15 @@ export default {
       stok: "",
     };
   },
+  computed: {
+    ...mapGetters('produk', ['getAllProducts']),
+    product() {
+      return this.getAllProducts
+    }
+  },
   methods: {
+
+    ...mapActions('produk', ['fetchProducts']),
     async createProduct() {
       const projectData = {
         nama_produk: this.nama_produk,
@@ -134,5 +166,8 @@ export default {
       }
     },
   },
+  mounted(){
+    this.fetchProducts()
+  }
 };
 </script>

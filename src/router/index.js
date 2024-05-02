@@ -8,6 +8,8 @@ import Detailproduct from "../views/Detailproduct.vue";
 import Dasboard from "../views/Dasboard.vue";
 import Adminproject from "../views/Adminproject.vue";
 import editProduct from "../views/EditProduct.vue"
+import Adminkontak from "../views/Adminkontak.vue";
+import editkontak from "../views/Editkontak.vue";
 
 const routes = [
     {
@@ -21,7 +23,7 @@ const routes = [
         component: Tambahdata,
     },
     {
-        path: "/edit",
+        path: "/edit/:id",
         name: "edit",
         component: editProduct,
     },
@@ -55,6 +57,16 @@ const routes = [
         name: "admin",
         component: Adminproject,
     },
+    {
+      path: "/datakontak",
+      name: "data",
+      component: Adminkontak,
+    },
+    {
+      path: "/editkontak/:id",
+      name: "editkontak",
+      component: editkontak,
+  },
     
 ];
 

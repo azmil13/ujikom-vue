@@ -1,169 +1,66 @@
 <template>
-<section class="bg-white py-12 text-gray-700 sm:py-16 lg:py-20">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-md text-center">
-      <h2 class="font-serif text-2xl font-bold sm:text-3xl">Product</h2>
-    </div>
-    <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-4 lg:mt-16">
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del> 
+  <section class="">
+  <div class="mx-auto max-w-md sm:max-w-lg md:max-w-screen-xl">
+    <div class="px-4 py-8 md:px-6 md:py-12 lg:px-20">
+      <h1 class="text-center text-3xl font-semibold text-gray-800 lg:text-4xl">Produk kami</h1>
+
+      <div class="mt-8 grid grid-cols-1 gap-6 md:mt-10 md:grid-cols-3 lg:gap-8">
+        
+        <article class="bg-slate-50 p-8">
+          <div class="">
+            <h2 class="text-xl text-gray-600">T-shirt Grey</h2>
+            <p class="mt-2 text-xl font-semibold text-gray-800"></p>
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button> 
-      </article>
-      
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+          <div class="mt-8 flex items-center justify-center md:mt-24">
+            <img class="" src="../assets/baju1.webp" alt="" />
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+        </article>
+        
+        <article class="bg-slate-50 p-8">
+          <div class="">
+            <h2 class="text-xl text-gray-600">T-shirt Black</h2>
+            <p class="mt-2 text-xl font-semibold text-gray-800"></p>
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+          <div class="mt-8 flex items-center justify-center md:mt-24">
+            <img class="" src="../assets/baju2.webp" alt="" />
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+        </article>
+        
+        <article class="bg-slate-50 p-8">
+          <div class="">
+            <h2 class="text-xl text-gray-600">T-shirt White</h2>
+            <p class="mt-2 text-xl font-semibold text-gray-800"></p>
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+          <div class="mt-8 flex items-center justify-center md:mt-24">
+            <img src="../assets/baju3.webp" alt="" />
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+        </article>
+      </div>
+
+      <div class="mt-4 grid grid-cols-1 gap-5 md:mt-6 md:grid-cols-2 md:gap-6 lg:mt-8 lg:gap-8">
+        
+        <article class="bg-slate-50 p-8">
+          <div>
+            <h2 class="text-xl text-gray-600">T-shirt Green</h2>
+            <p class="mt-2 text-xl font-semibold text-gray-800"></p>
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
-      
-      <article class="relative flex flex-col overflow-hidden rounded-lg border">
-        <div class="aspect-square overflow-hidden">
-          <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="https://pbs.twimg.com/profile_images/594720057688625152/pxzB_GLv_400x400.jpg" alt="" />
-        </div>
-        <div class="absolute top-0 m-2 rounded-full bg-white">
-          <p class="rounded-full bg-emerald-500 p-1 text-[8px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">Look</p>
-        </div>
-        <div class="my-4 mx-auto flex w-10/12 flex-col items-start justify-between">
-          <div class="mb-2 flex">
-            <p class="mr-3 text-sm font-semibold">$99.00</p>
-            <del class="text-xs text-gray-400"> $79.00 </del>
+          <div class="mt-28 flex items-center justify-center md:mt-3">
+            <img src="../assets/baju4.webp" alt="" />
           </div>
-          <h3 class="mb-2 text-sm text-gray-400">Fresh Apples</h3>
-        </div>
-        <button class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
-          <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-emerald-600 group-hover:text-white"><a href="/detail">Check</a></div>
-        </button>
-      </article>
+        </article>
+        
+        <article class="bg-slate-50 p-8">
+          <div>
+            <h2 class="text-xl text-gray-600">T-shirt Blue</h2>
+            <p class="mt-2 text-xl font-semibold text-gray-800"></p>
+          </div>
+          <div class="mt-28 flex items-center justify-center md:mt-1">
+            <img src="../assets/baju5.webp" alt="" />
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
 
-  </template>
+</template>

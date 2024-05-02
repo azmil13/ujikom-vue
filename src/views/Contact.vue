@@ -1,12 +1,11 @@
 <template>
- <!-- Container for demo purpose -->
-<div class="container my-24 mx-auto md:px-6">
-  <!-- Section: Design Block -->
-  <section class="mb-30">
+  <form>
+    <div class="container my-24 mx-auto md:px-6">
+      <section class="mb-30">
     <div
       class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/171.jpg')]">
     </div>
-    <div class="container px-6 md:px-12">
+    <div class="container px-6 md:px-12" >
       <div
         class="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
         <div class="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4">
@@ -33,7 +32,7 @@
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
             </svg>
-            <h6 class="font-medium">0896522779</h6>
+            <h6 class="font-medium">085795744281</h6>
           </div>
           <div class="mx-auto text-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -47,7 +46,7 @@
         <div class="mx-auto max-w-[700px]">
           <form>
             <div class="relative mb-6" data-te-input-wrapper-init>
-              <input type="text"
+              <input type="text" v-model="nama"
                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleInput90" placeholder="Name" />
               <label
@@ -56,7 +55,7 @@
               </label>
             </div>
             <div class="relative mb-6" data-te-input-wrapper-init>
-              <input type="email"
+              <input type="email" v-model="email"
                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleInput91" placeholder="Email address" />
               <label
@@ -65,7 +64,7 @@
               </label>
             </div>
             <div class="relative mb-6" data-te-input-wrapper-init>
-              <textarea
+              <textarea v-model="pesan"
                 class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
               <label for="exampleFormControlTextarea1"
@@ -79,7 +78,7 @@
                 Send me a copy of this message
               </label>
             </div>
-            <button type="button" data-te-ripple-init data-te-ripple-color="light"
+            <button type="button" data-te-ripple-init data-te-ripple-color="light" @click="createKontak()"
               class="inline-block w-full rounded bg-black px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] lg:mb-0">
               Send
             </button>
@@ -88,9 +87,8 @@
       </div>
     </div>
   </section>
-  <!-- Section: Design Block -->
-</div>
-<!-- Container for demo purpose -->
+    </div>
+  </form>
 </template>
 
 <style>
@@ -100,3 +98,39 @@ body {
   font-family: 'Poppins', sans-serif !important;
 }
 </style>
+
+<script>
+export default {
+    data() {
+      return {
+        email: "",
+        nama: "",
+        pesan: "",
+      };
+    },
+    methods: {
+      async createKontak() {
+        const kontakData = {
+          email: this.email,
+          nama: this.nama,
+          pesan: this.pesan,
+        };
+        try {
+          const success = await this.$store.dispatch(
+            "kontak/createKontak",
+            kontakData
+          );
+          if (success) {
+        alert("Berhasil")
+            this.email = "";
+            this.nama = "";
+            this.pesan = "";
+          }
+        } catch (error) {
+          alert("Gagal")
+          console.error(error);
+        }
+      },
+    },
+  };
+</script>

@@ -19,7 +19,7 @@
         <input v-model="stok" class="w-full rounded-md border bg-white px-2 py-2 outline-none ring-blue-600 focus:ring-1" type="text" placeholder="Enter your Stok" />
       </label>
       
-      <button class="mt-4 rounded-full bg-blue-800 px-10 py-2 font-semibold text-white">Submit</button>
+      <button type="submit" class="mt-4 rounded-full bg-blue-800 px-10 py-2 font-semibold text-white">Submit</button>
     </div>
     </form>
   
@@ -44,7 +44,7 @@
         };
         try {
           const success = await this.$store.dispatch(
-            "product/createProduct",
+            "produk/createProduct",
             projectData
           );
   
